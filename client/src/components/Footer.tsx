@@ -49,11 +49,6 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img
-                src="/manus-storage/data-scientist-logo_6a2d37fe.png"
-                alt="Logo"
-                className="w-8 h-8"
-              />
               <span className="font-display font-bold text-lg text-foreground">
                 Aditya Singh
               </span>
