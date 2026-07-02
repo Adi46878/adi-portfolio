@@ -35,7 +35,7 @@ export default function Hero() {
 
           {/* Subheading */}
           <p className="text-lg md:text-xl text-foreground/80 mb-8 max-w-2xl mx-auto leading-relaxed cascade-enter" style={{ animationDelay: '240ms' }}>
-            Data-focused professional at Maharshi Dayanand University with expertise in Machine Learning, AI, and Analytics. I build end-to-end ML pipelines, develop Power BI dashboards, and create intelligent workflows using Python, SQL, and cutting-edge technologies. Certified by AnalytixLabs, NPTEL, and FutureSkills Prime.
+            B.Tech graduate in Data Science from Maharshi Dayanand University with a strong foundation in Machine Learning, Artificial Intelligence, Data Analytics, and Data Visualization. Experienced in building end-to-end machine learning solutions, developing Power BI dashboards, and solving real-world business problems using Python, SQL, and modern data science tools. Certified by AnalytixLabs, NPTEL, and FutureSkills Prime.
           </p>
 
           {/* CTA Buttons */}
