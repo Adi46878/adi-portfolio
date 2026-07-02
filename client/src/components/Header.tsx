@@ -19,11 +19,6 @@ export default function Header() {
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <img
-            src="/manus-storage/professional-logo_8aa87ecd.png"
-            alt="Data Scientist Logo"
-            className="w-8 h-8 md:w-10 md:h-10"
-          />
           <span className="font-display font-bold text-lg md:text-xl text-foreground hidden sm:inline">
             Aditya Singh
           </span>
