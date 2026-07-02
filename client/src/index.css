@@ -1,0 +1,552 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-family-display: "Sora", system-ui, -apple-system, sans-serif;
+  --font-family-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-mono: "Space Mono", monospace;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-display: var(--font-family-display);
+  --font-sans: var(--font-family-sans);
+  --font-mono: var(--font-family-mono);
+}
+
+:root {
+  /* Refined Professional Theme */
+  --primary: oklch(0.48 0.12 260); /* Slate Blue */
+  --primary-foreground: oklch(0.98 0.01 65); /* Off-white */
+  --sidebar-primary: oklch(0.52 0.14 250); /* Deep Blue */
+  --sidebar-primary-foreground: oklch(0.98 0.01 65);
+  --chart-1: oklch(0.52 0.14 250); /* Deep Blue */
+  --chart-2: oklch(0.55 0.13 200); /* Soft Teal */
+  --chart-3: oklch(0.48 0.12 260); /* Slate Blue */
+  --chart-4: oklch(0.58 0.10 280); /* Muted Blue */
+  --chart-5: oklch(0.62 0.08 290); /* Light Blue */
+  --radius: 0.75rem;
+  --background: oklch(0.98 0.01 65); /* Off-white */
+  --foreground: oklch(0.25 0.02 260); /* Dark Slate */
+  --card: oklch(1 0 0); /* Pure White */
+  --card-foreground: oklch(0.25 0.02 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.02 260);
+  --secondary: oklch(0.95 0.01 65); /* Light Gray */
+  --secondary-foreground: oklch(0.35 0.02 260);
+  --muted: oklch(0.88 0.01 65); /* Soft Gray */
+  --muted-foreground: oklch(0.48 0.12 260); /* Slate Blue */
+  --accent: oklch(0.55 0.13 200); /* Soft Teal */
+  --accent-foreground: oklch(0.98 0.01 65);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.92 0.01 65); /* Light Border */
+  --input: oklch(0.98 0.01 65); /* Off-white Input */
+  --ring: oklch(0.48 0.12 260); /* Slate Blue Ring */
+  --sidebar: oklch(0.98 0.01 65);
+  --sidebar-foreground: oklch(0.25 0.02 260);
+  --sidebar-accent: oklch(0.55 0.13 200);
+  --sidebar-accent-foreground: oklch(0.98 0.01 65);
+  --sidebar-border: oklch(0.92 0.01 65);
+  --sidebar-ring: oklch(0.48 0.12 260);
+}
+
+.dark {
+  /* Light theme is the default */
+  --primary: oklch(0.48 0.12 260);
+  --primary-foreground: oklch(0.98 0.01 65);
+  --sidebar-primary: oklch(0.52 0.14 250);
+  --sidebar-primary-foreground: oklch(0.98 0.01 65);
+  --background: oklch(0.98 0.01 65);
+  --foreground: oklch(0.25 0.02 260);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0.02 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.02 260);
+  --secondary: oklch(0.95 0.01 65);
+  --secondary-foreground: oklch(0.35 0.02 260);
+  --muted: oklch(0.88 0.01 65);
+  --muted-foreground: oklch(0.48 0.12 260);
+  --accent: oklch(0.55 0.13 200);
+  --accent-foreground: oklch(0.98 0.01 65);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.92 0.01 65);
+  --input: oklch(0.98 0.01 65);
+  --ring: oklch(0.48 0.12 260);
+  --chart-1: oklch(0.52 0.14 250);
+  --chart-2: oklch(0.55 0.13 200);
+  --chart-3: oklch(0.48 0.12 260);
+  --chart-4: oklch(0.58 0.10 280);
+  --chart-5: oklch(0.62 0.08 290);
+  --sidebar: oklch(0.98 0.01 65);
+  --sidebar-foreground: oklch(0.25 0.02 260);
+  --sidebar-accent: oklch(0.55 0.13 200);
+  --sidebar-accent-foreground: oklch(0.98 0.01 65);
+  --sidebar-border: oklch(0.92 0.01 65);
+  --sidebar-ring: oklch(0.48 0.12 260);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+  h1 {
+    @apply text-5xl font-bold tracking-tight;
+  }
+  h2 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+  body {
+    @apply font-sans;
+  }
+  code, pre {
+    @apply font-mono;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
+    }
+  }
+}
+
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glow effect for accent elements */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(101, 204, 187, 0.3);
+}
+
+.glow-primary:hover {
+  box-shadow: 0 0 30px rgba(101, 204, 187, 0.5);
+}
+
+/* Button interactions */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]) {
+  transition: all 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+button:not(:disabled):active,
+[role="button"]:not([aria-disabled="true"]):active {
+  transform: scale(0.97);
+}
+
+/* Link hover effects */
+a {
+  transition: color 200ms ease-out;
+}
+
+/* Input focus states */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: rgb(101, 204, 187, 0.5);
+}
+
+/* Scroll fade effect */
+@supports (animation-timeline: view()) {
+  .fade-in-scroll {
+    opacity: 0;
+    animation: fadeInScroll linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+
+  @keyframes fadeInScroll {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.875rem;
+  }
+}
+
+
+/* ============================================
+   COMPREHENSIVE ANIMATION SYSTEM
+   ============================================ */
+
+/* Easing functions */
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* ============================================
+   SCROLL ANIMATIONS
+   ============================================ */
+
+/* Fade in and slide up on scroll */
+.animate-fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s var(--ease-out) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation delays */
+.animate-fade-in-up:nth-child(1) { animation-delay: 0ms; }
+.animate-fade-in-up:nth-child(2) { animation-delay: 80ms; }
+.animate-fade-in-up:nth-child(3) { animation-delay: 160ms; }
+.animate-fade-in-up:nth-child(4) { animation-delay: 240ms; }
+.animate-fade-in-up:nth-child(5) { animation-delay: 320ms; }
+.animate-fade-in-up:nth-child(6) { animation-delay: 400ms; }
+
+/* Fade in and scale */
+.animate-fade-in-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScale 0.6s var(--ease-out) forwards;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================================
+   HOVER EFFECTS
+   ============================================ */
+
+/* Card lift effect */
+.card-hover-lift {
+  transition: all 300ms var(--ease-out);
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Glow on hover */
+.hover-glow {
+  transition: all 300ms var(--ease-out);
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(101, 204, 187, 0.4);
+}
+
+/* Icon bounce on hover */
+.hover-bounce {
+  transition: transform 300ms var(--ease-bounce);
+}
+
+.hover-bounce:hover {
+  transform: scale(1.1);
+}
+
+/* Shimmer effect */
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ============================================
+   PAGE LOAD ANIMATIONS
+   ============================================ */
+
+/* Cascade entrance */
+.cascade-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cascadeEnter 0.6s var(--ease-out) forwards;
+}
+
+@keyframes cascadeEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cascade-enter:nth-child(1) { animation-delay: 0ms; }
+.cascade-enter:nth-child(2) { animation-delay: 120ms; }
+.cascade-enter:nth-child(3) { animation-delay: 240ms; }
+
+/* Zoom in entrance */
+.zoom-in-entrance {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: zoomInEntrance 0.5s var(--ease-out) forwards;
+}
+
+@keyframes zoomInEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================================
+   MICRO-INTERACTIONS
+   ============================================ */
+
+/* Input underline animation */
+input:focus,
+textarea:focus {
+  position: relative;
+}
+
+input::after,
+textarea::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  animation: expandUnderline 300ms var(--ease-out) forwards;
+}
+
+@keyframes expandUnderline {
+  from {
+    width: 0;
+    left: 50%;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+/* Download icon animation */
+.download-animate {
+  animation: downloadBounce 1s ease-in-out infinite;
+}
+
+@keyframes downloadBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+/* Pulse effect */
+.pulse-effect {
+  animation: pulse 2s var(--ease-in-out) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ============================================
+   SCROLL-TRIGGERED EFFECTS
+   ============================================ */
+
+/* Navbar blur on scroll */
+.navbar-scroll-blur {
+  transition: all 300ms var(--ease-out);
+}
+
+.navbar-scroll-blur.scrolled {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Counter animation */
+.counter-animate {
+  animation: countUp 1.5s var(--ease-out) forwards;
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Timeline draw animation */
+.timeline-draw {
+  animation: timelineDraw 1s var(--ease-out) forwards;
+}
+
+@keyframes timelineDraw {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+/* ============================================
+   RESPONSIVE ANIMATIONS
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Disable animations on mobile for performance */
+@media (max-width: 768px) {
+  .shimmer-effect::after {
+    animation: none;
+  }
+}
