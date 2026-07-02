@@ -65,7 +65,7 @@ export default function About() {
               {/* Profile Image Container */}
               <div className="relative w-80 h-80 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-primary/30 shadow-2xl">
                 <img
-                  src="https://github.com/Adi46878/aditya-singh-portfolio/blob/main/photoadi.png?raw=true"
+                  src="https://github.com/Adi46878/adi-portfolio/blob/main/photoadi.png?raw=true"
                   alt="Aditya Singh"
                   className="w-full h-full object-cover"
                 />
