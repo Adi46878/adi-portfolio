@@ -41,7 +41,7 @@ export default function Header() {
             variant="outline"
             className="border-primary/50 hover:bg-primary/10 text-foreground"
             onClick={() => {
-              window.open('https://drive.google.com/file/d/1UAeWhwft03zMmIE7sH7JvoCxKokBasDT/view?usp=drive_link', '_blank');
+              window.open('https://drive.google.com/file/d/1e88kLVz_RsBBKUsWp0FMNZ3yS7QiNKkO/view?usp=sharing', '_blank');
             }}
           >
             <Download className="w-4 h-4 mr-2" />
@@ -90,7 +90,7 @@ export default function Header() {
               variant="outline"
               className="w-full border-primary/50 hover:bg-primary/10 text-foreground mt-2"
               onClick={() => {
-                window.open('https://drive.google.com/file/d/1UAeWhwft03zMmIE7sH7JvoCxKokBasDT/view?usp=drive_link', '_blank');
+                window.open('https://drive.google.com/file/d/1e88kLVz_RsBBKUsWp0FMNZ3yS7QiNKkO/view?usp=sharing', '_blank');
               }}
             >
               <Download className="w-4 h-4 mr-2" />
