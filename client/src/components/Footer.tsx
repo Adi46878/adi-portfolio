@@ -31,12 +31,7 @@ export default function Footer() {
             <Button
               className="bg-primary hover:bg-primary/90 text-primary-foreground whitespace-nowrap"
               onClick={() => {
-                const link = document.createElement('a');
-                link.href = 'https://drive.google.com/uc?export=download&id=1IwmZprAIuOv7l6eaC9_OJ2Nfho1WgCAr';
-                link.download = 'Aditya_Singh_Resume.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
+                window.open('https://drive.google.com/file/d/1UAeWhwft03zMmIE7sH7JvoCxKokBasDT/view?usp=drive_link', '_blank');
               }}
             >
               <Download className="w-4 h-4 mr-2" />
