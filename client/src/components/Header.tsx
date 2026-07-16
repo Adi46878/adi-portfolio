@@ -17,12 +17,10 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-border shadow-sm">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <span className="font-display font-bold text-lg md:text-xl text-foreground hidden sm:inline">
-            Aditya Singh
-          </span>
-        </div>
+        {/* Brand Name */}
+        <span className="font-display font-bold text-lg md:text-xl text-foreground">
+          Aditya Singh
+        </span>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">

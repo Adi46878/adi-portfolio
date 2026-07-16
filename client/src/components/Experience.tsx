@@ -4,6 +4,22 @@ import { Briefcase, Calendar } from "lucide-react";
 const experiences = [
   {
     id: 1,
+    title: "Data Analyst Intern - Atechnocrat Web Solutions",
+    company: "Atechnocrat Web Solutions Pvt. Ltd.",
+    period: "April - July 2026",
+    duration: "3 months",
+    description:
+      "Completed a 3-month internship focused on data analytics and dashboard development. Worked on data collection, data cleaning, data scraping, dashboard creation, Excel analytics, and reporting tasks. Demonstrated strong learning ability and discipline throughout the internship.",
+    achievements: [
+      "Performed data collection and cleaning for multiple projects",
+      "Created interactive dashboards for data visualization",
+      "Conducted Excel analytics and reporting",
+      "Implemented data scraping solutions for data acquisition",
+    ],
+    skills: ["Data Collection", "Data Cleaning", "Excel", "Dashboard Creation", "Reporting"],
+  },
+  {
+    id: 2,
     title: "Data & AI Training Intern - AnalytixLabs",
     company: "AnalytixLabs",
     period: "July 2025 - Present",
@@ -19,7 +35,7 @@ const experiences = [
     skills: ["Python", "SQL", "Power BI", "DAX", "Machine Learning"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Data Science Intern - YBI Foundation",
     company: "YBI Foundation",
     period: "June - July 2024",

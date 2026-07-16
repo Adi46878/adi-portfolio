@@ -48,11 +48,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <span className="font-display font-bold text-lg text-foreground">
-                Aditya Singh
-              </span>
-            </div>
+            <h3 className="font-display font-bold text-lg text-foreground mb-2">
+              Aditya Singh
+            </h3>
             <p className="text-sm text-foreground/60">
               Transforming data into actionable insights through advanced
               analytics and machine learning.
