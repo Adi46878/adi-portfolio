@@ -42,7 +42,7 @@ export default function Header() {
             className="border-primary/50 hover:bg-primary/10 text-foreground"
             onClick={() => {
               const link = document.createElement('a');
-              link.href = 'https://drive.google.com/uc?export=download&id=16nW0iTJr4V0DjcrULjEYvKPud1meBLps';
+              link.href = 'https://drive.google.com/uc?export=download&id=1IwmZprAIuOv7l6eaC9_OJ2Nfho1WgCAr';
               link.download = 'Aditya_Singh_Resume.pdf';
               document.body.appendChild(link);
               link.click();
@@ -96,7 +96,7 @@ export default function Header() {
               className="w-full border-primary/50 hover:bg-primary/10 text-foreground mt-2"
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = 'https://drive.google.com/uc?export=download&id=16nW0iTJr4V0DjcrULjEYvKPud1meBLps';
+                link.href = 'https://drive.google.com/uc?export=download&id=1IwmZprAIuOv7l6eaC9_OJ2Nfho1WgCAr';
                 link.download = 'Aditya_Singh_Resume.pdf';
                 document.body.appendChild(link);
                 link.click();
